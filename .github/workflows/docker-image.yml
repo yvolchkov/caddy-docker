@@ -22,4 +22,6 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag yvolchkov/caddy:$(date +%s) --tag yvolchkov/caddy:latest
+    - name: push to the registry
+      run: |
         docker push yvolchkov/caddy:latest
